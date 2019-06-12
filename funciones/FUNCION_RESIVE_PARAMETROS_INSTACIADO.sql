@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    A NUMBER:=10;
+    B NUMBER:=25;
+    Z NUMBER;
+
+BEGIN
+
+    Z:=NUM_MAYOR(A,B);
+    DBMS_OUTPUT.put_line('EL NUMERO MAYOR ES: '||Z);
+END;
+/

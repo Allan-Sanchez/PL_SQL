@@ -1,0 +1,29 @@
+-- registros definidos por usuarios
+
+set SERVEROUTPUT ON;
+
+DECLARE
+    
+    type CARRO IS RECORD(
+        MARCA NVARCHAR2(100),
+        COLOR NVARCHAR2(100),
+        PUERTAS NUMBER
+    );
+
+    MAZDA CARRO;
+    TOYOTA CARRO;
+
+BEGIN
+    
+    MAZDA.MARCA:='MAZDA';
+    MAZDA.COLOR:='BLUE';
+    MAZDA.PUERTAS:=4;
+
+    TOYOTA.MARCA:='TOYOTA';
+    TOYOTA.COLOR:='RED';
+    TOYOTA.PUERTAS:=2;
+    
+    DBMS_OUTPUT.PUT_LINE(MAZDA.MARCA);
+    
+END;
+/
